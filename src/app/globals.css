@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-midnight text-ivory font-body antialiased;
+  }
+
+  /* Headline + section titles default to the headline typeface / bold weight.
+     Individual components can still override weight via utilities. */
+  h1,
+  h2,
+  h3 {
+    @apply font-headline;
+  }
+
+  /* Respect users who prefer reduced motion (disables the values ticker marquee). */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+      animation: none;
+    }
+  }
+}
+
+@layer components {
+  /* Reusable content container. */
+  .container-content {
+    @apply mx-auto w-full max-w-content px-6 sm:px-8 lg:px-12;
+  }
+
+  /* Small uppercase eyebrow label used above section headings. */
+  .eyebrow {
+    @apply font-subhead text-xs font-medium uppercase tracking-[0.25em] text-sand;
+  }
+}

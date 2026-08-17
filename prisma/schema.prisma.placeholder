@@ -1,0 +1,30 @@
+// ─────────────────────────────────────────────────────────────────────────
+// DATABASE SCHEMA — PLACEHOLDER / MARKER ONLY (NOT WIRED UP)
+//
+// This file is intentionally named `.placeholder` so no ORM tooling picks it
+// up. It documents the future data needs for the members-only performance-
+// tracking feature. No database, Prisma, or other ORM is installed yet.
+//
+// When performance tracking is built, decide on a database + ORM (Prisma,
+// Drizzle, Supabase, etc.), rename/replace this with a real schema, and add
+// the corresponding packages. The auth provider (see middleware.ts) should be
+// chosen first so user identity maps cleanly to AthleteProfile.
+//
+// Sketch of the eventual models (illustrative — not final):
+//
+//   AthleteProfile
+//     id, userId (from auth provider), firstName, lastName, birthDate,
+//     primaryPosition, throws, bats, createdAt
+//
+//   TrainingSession
+//     id, athleteId -> AthleteProfile, date, type (coaching|performance),
+//     coachId, notes
+//
+//   Metric  (time-series performance data — the core of "progress over time")
+//     id, athleteId -> AthleteProfile, sessionId -> TrainingSession,
+//     kind (exitVelocity | launchAngle | sixtyYardDash | benchPress | ...),
+//     value, unit, recordedAt
+//
+// The Metric table is deliberately generic (kind/value/unit) so new tracked
+// stats can be added without schema migrations.
+// ─────────────────────────────────────────────────────────────────────────

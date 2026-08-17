@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Kingdom Built Performance">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0F1B2E"/><stop offset="1" stop-color="#0B1220"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect x="24" y="24" width="1152" height="582" fill="none" stroke="#D6C6A6" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="600" y="270" fill="#F2EFE9" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" letter-spacing="4" text-anchor="middle">KINGDOM BUILT</text>
+  <text x="600" y="330" fill="#D6C6A6" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="500" letter-spacing="10" text-anchor="middle">— PERFORMANCE —</text>
+  <text x="600" y="430" fill="#D6C6A6" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" letter-spacing="2" text-anchor="middle">Built Different. Built With Purpose. Built For More.</text>
+  <!-- TODO: replace with a real 1200x630 PNG/JPG for reliable social previews -->
+</svg>
