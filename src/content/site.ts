@@ -45,7 +45,8 @@ export const business = {
 
 // External booking system (RunSwift). The facility/booking backend predates the
 // rebrand, hence the "boomroom30a" slug — this is intentional, not a typo.
-export const BOOKING_URL = "https://book.runswiftapp.com/facilities/boomroom30a";
+export const BOOKING_URL =
+  "https://book.runswiftapp.com/facilities/boomroom30a";
 
 // Social handles — placeholder URLs until real profile links are provided.
 export const socials = [
@@ -94,7 +95,10 @@ export const footerNav = {
     heading: "Performance",
     links: [
       { label: "Speed & Agility", href: "/performance#speed-agility" },
-      { label: "Strength Training", href: "/performance#strength-conditioning" },
+      {
+        label: "Strength Training",
+        href: "/performance#strength-conditioning",
+      },
       { label: "HitTrax Sessions", href: "/performance#hittrax-technology" },
       { label: "Assessments", href: "/contact" },
     ],

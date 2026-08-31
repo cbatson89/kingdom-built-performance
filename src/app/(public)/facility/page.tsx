@@ -44,7 +44,10 @@ export default function FacilityPage() {
               </dd>
             </div>
 
-            <div id="hours" className="scroll-mt-28 border-t border-charcoal pt-6">
+            <div
+              id="hours"
+              className="scroll-mt-28 border-t border-charcoal pt-6"
+            >
               <dt className="font-subhead text-xs font-medium uppercase tracking-[0.2em] text-sand">
                 Hours
               </dt>
@@ -77,13 +80,15 @@ export default function FacilityPage() {
 
         {/* Right: photo */}
         <div className="relative aspect-[4/5] w-full overflow-hidden">
-          <PlaceholderImage
-            src={facility.image}
-            alt={facility.imageAlt}
-            fill
-            sizes="(max-width: 1024px) 100vw, 45vw"
-            className="object-cover"
-          />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.8846925458543!2d-86.23189842387079!3d30.382632002467393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8893e189c5d68b97%3A0x6c3a3a2ed2c5b94!2s605%20N%20County%20Hwy%20393%20Unit%20C-4%2C%20Santa%20Rosa%20Beach%2C%20FL%2032459!5e0!3m2!1sen!2sus!4v1788201330406!5m2!1sen!2sus"
+            width="600"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen={false}
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+          ></iframe>
         </div>
       </div>
     </section>

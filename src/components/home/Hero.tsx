@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-midnight">
       {/* Background image (behind content) */}
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0">
         <PlaceholderImage
           src={hero.image}
           alt={hero.imageAlt}
@@ -24,22 +24,23 @@ export function Hero() {
           aria-hidden="true"
           className="absolute inset-0 bg-gradient-to-r from-midnight via-midnight/90 to-midnight/40"
         />
-      </div>
+      </div> */}
 
       <div className="container-content relative py-24 sm:py-32 lg:py-40">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <p className="eyebrow mb-6">{hero.eyebrow}</p>
 
           {/* One h1 per page */}
-          <h1 className="font-headline text-5xl font-bold uppercase leading-[0.92] tracking-tight sm:text-7xl lg:text-8xl">
-            {hero.headlineLines.map((line, i) => (
-              <span
-                key={i}
-                className={line.emphasis ? "text-sand" : "text-ivory"}
-              >
-                {line.text}{" "}
-              </span>
-            ))}
+          <h1 className="font-headline text-5xl font-bold uppercase leading-[0.92] tracking-tight sm:text-7xl lg:text-8xl flex flex-col">
+            <span>
+              Built <span className="text-sand">Different</span>
+            </span>
+            <span>
+              Built With <span className="text-sand">Purpose</span>
+            </span>
+            <span>
+              Built For <span className="text-sand">More</span>
+            </span>
           </h1>
 
           <p className="mt-8 max-w-xl font-body text-lg leading-relaxed text-ivory/80">

@@ -38,7 +38,7 @@ export const coaching: Pillar = {
       description:
         "One-on-one instruction with certified coaches covering hitting mechanics, pitching, fielding, and catching. Tailored to your player's age, position, and goals.",
       tags: ["Hitting", "Pitching", "Fielding", "Catching"],
-      image: "/placeholders/coaching-private-lessons.svg",
+      image: "/photos/KBP_Branding-48-compressed.jpg",
       imageAlt:
         "Youth baseball player receiving one-on-one batting instruction from a coach at Kingdom Built Performance in Santa Rosa Beach",
     },
@@ -48,7 +48,7 @@ export const coaching: Pillar = {
       description:
         "Bring your team indoors for organized station work, cage time, and a reliable game-plan for focused collective improvement.",
       tags: ["Station Work", "Cage Time", "Game Planning"],
-      image: "/placeholders/coaching-team-training.svg",
+      image: "/photos/KBP_Branding-17-compressed.jpg",
       imageAlt:
         "Youth baseball team running organized indoor station work during a team training session",
     },
@@ -58,7 +58,7 @@ export const coaching: Pillar = {
       description:
         "Intensive multi-day camps and position-specific clinics led by experienced coaches. High reps, high energy, high results.",
       tags: ["Multi-Day Camps", "Position Clinics", "All Levels"],
-      image: "/placeholders/coaching-camps-clinics.svg",
+      image: "/photos/KBP_Branding-39-compressed.jpg",
       imageAlt:
         "Group of young baseball players fielding ground balls during a multi-day camp at Kingdom Built Performance",
     },
@@ -86,7 +86,7 @@ export const performance: Pillar = {
       description:
         "Sport-specific movement training designed to improve first-step quickness, baserunning efficiency, and defensive range. Built for baseball athletes.",
       tags: ["First Step", "Baserunning", "Lateral Movement"],
-      image: "/placeholders/performance-speed-agility.svg",
+      image: "/photos/KBP_Branding-58-compressed.jpg",
       imageAlt:
         "Baseball athlete performing agility ladder footwork drills during a speed and agility session",
     },
@@ -96,7 +96,7 @@ export const performance: Pillar = {
       description:
         "Programming built around the demands of baseball — rotational power, arm care, durability, and explosive hip drive to maximize on-field output.",
       tags: ["Rotational Power", "Arm Care", "Explosive Training"],
-      image: "/placeholders/performance-strength-conditioning.svg",
+      image: "/photos/KBP_Branding-05-compressed.jpg",
       imageAlt:
         "Athlete performing a strength and conditioning lift in the Kingdom Built Performance weight area",
     },
@@ -106,7 +106,7 @@ export const performance: Pillar = {
       description:
         "Data-driven hitting analysis using HitTrax launch angle, exit velocity, and batted ball tracking. Know your numbers. Improve your game.",
       tags: ["Exit Velocity", "Launch Angle", "Bat Path Data"],
-      image: "/placeholders/performance-hittrax.svg",
+      image: "/photos/KBP_Branding-02-compressed.jpg",
       imageAlt:
         "Hitter taking a swing in a HitTrax-equipped batting cage that tracks exit velocity and launch angle",
     },

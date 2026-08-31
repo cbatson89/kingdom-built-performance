@@ -1,13 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { business } from "@/content/site";
 
-/**
- * Wordmark logo — TEXT PLACEHOLDER.
- *
- * TODO: replace this text wordmark with the final logo SVG (and optionally an
- * emblem/icon mark). Keep it wrapped in the Link so header/footer usage is
- * unchanged. Rendered as real text for now so it stays crisp and accessible.
- */
 export function Logo({
   className,
   tone = "light",
@@ -18,7 +12,9 @@ export function Logo({
   return (
     <Link
       href="/"
-      className={["group inline-flex flex-col leading-none", className].join(" ")}
+      className={["group inline-flex flex-col leading-none", className].join(
+        " ",
+      )}
       aria-label={`${business.name} — home`}
     >
       {/* TODO: replace with final logo SVG */}

@@ -49,7 +49,7 @@ export const missionSnippet = {
     { label: "Character Built", icon: "leadership" as const },
     { label: "Performance First", icon: "strength" as const },
   ],
-  image: "/placeholders/mission.svg",
+  image: "/photos/KBP_Branding-17-compressed.jpg",
   imageAlt:
     "A baseball player standing on a freshly cut outfield at Kingdom Built Performance",
 } as const;
