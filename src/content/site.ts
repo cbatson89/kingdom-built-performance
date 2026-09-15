@@ -43,10 +43,9 @@ export const business = {
   areaServed: ["Santa Rosa Beach", "30A", "Walton County", "Florida Panhandle"],
 } as const;
 
-// External booking system (RunSwift). The facility/booking backend predates the
-// rebrand, hence the "boomroom30a" slug — this is intentional, not a typo.
+// External booking system (RunSwift).
 export const BOOKING_URL =
-  "https://book.runswiftapp.com/facilities/boomroom30a";
+  "https://book.runswiftapp.com/facilities/kingdombuiltperformance";
 
 // Social handles — placeholder URLs until real profile links are provided.
 export const socials = [
@@ -86,7 +85,7 @@ export const footerNav = {
     heading: "Coaching",
     links: [
       { label: "Private Lessons", href: "/coaching#private-lessons" },
-      { label: "Team Training", href: "/coaching#team-training" },
+      { label: "Group Training", href: "/coaching#group-training" },
       { label: "Camps & Clinics", href: "/coaching#camps-clinics" },
       { label: "Find a Coach", href: "/contact" },
     ],

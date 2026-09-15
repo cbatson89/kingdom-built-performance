@@ -9,7 +9,7 @@ export const contact = {
     { text: "Ready To Be", emphasis: false },
     { text: "Kingdom Built?", emphasis: true },
   ],
-  body: "Whether you're booking your first lesson, registering for a camp, or inquiring about team training — we'd love to hear from you. Every great athlete starts with a first session.",
+  body: "Whether you're booking your first lesson, registering for a camp, or inquiring about group training — we'd love to hear from you. Every great athlete starts with a first session.",
 } as const;
 
 export const facility = {

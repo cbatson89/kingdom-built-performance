@@ -9,7 +9,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Faith-Driven Baseball Training in Santa Rosa Beach, FL",
   description:
-    "Kingdom Built Performance is an elite, faith-driven baseball training facility in Santa Rosa Beach on 30A. Private coaching, team training, camps, speed & strength, and HitTrax analysis.",
+    "Kingdom Built Performance is an elite, faith-driven baseball training facility in Santa Rosa Beach on 30A. Private coaching, group training, camps, speed & strength, and HitTrax analysis.",
   path: "/",
 });
 

@@ -43,14 +43,14 @@ export const coaching: Pillar = {
         "Youth baseball player receiving one-on-one batting instruction from a coach at Kingdom Built Performance in Santa Rosa Beach",
     },
     {
-      id: "team-training",
-      title: "Team Training",
+      id: "group-training",
+      title: "Group Training",
       description:
         "Bring your team indoors for organized station work, cage time, and a reliable game-plan for focused collective improvement.",
       tags: ["Station Work", "Cage Time", "Game Planning"],
       image: "/photos/KBP_Branding-17-compressed.jpg",
       imageAlt:
-        "Youth baseball team running organized indoor station work during a team training session",
+        "Youth baseball team running organized indoor station work during a group training session",
     },
     {
       id: "camps-clinics",

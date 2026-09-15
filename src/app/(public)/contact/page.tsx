@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Contact — Start Your Journey",
   description:
-    "Get in touch with Kingdom Built Performance in Santa Rosa Beach, FL. Book your first lesson, register for a camp, or inquire about team training. Call (850) 809-7777.",
+    "Get in touch with Kingdom Built Performance in Santa Rosa Beach, FL. Book your first lesson, register for a camp, or inquire about group training. Call (850) 809-7777.",
   path: "/contact",
 });
 
