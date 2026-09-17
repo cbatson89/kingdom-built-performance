@@ -2,6 +2,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ServiceCard } from "@/components/services/ServiceCard";
 import { PillarCallout } from "@/components/services/PillarCallout";
 import type { Pillar } from "@/content/services";
+import { BOOKING_URL } from "@/content/site";
 
 /**
  * Shared layout for the Coaching and Performance detail pages: page heading,
@@ -32,7 +33,11 @@ export function PillarPage({
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {pillar.services.map((service) => (
-              <ServiceCard key={service.id} service={service} />
+              <ServiceCard
+                key={service.id}
+                service={service}
+                bookingUrl={pillar.key === "coaching" ? BOOKING_URL : undefined}
+              />
             ))}
           </div>
         </div>
