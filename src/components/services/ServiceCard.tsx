@@ -45,7 +45,7 @@ export function ServiceCard({
         </p>
 
         {/* Tag pills */}
-        <ul className="mt-6 flex flex-wrap gap-2">
+        <ul className="mb-6 mt-6 flex flex-wrap gap-2">
           {service.tags.map((tag) => (
             <li
               key={tag}
@@ -58,7 +58,7 @@ export function ServiceCard({
 
         {/* Booking CTA */}
         {bookingUrl && (
-          <Cta href={bookingUrl} external variant="solid" className="mt-6 w-full">
+          <Cta href={bookingUrl} external variant="solid" className="mt-auto w-full">
             Book Now
           </Cta>
         )}

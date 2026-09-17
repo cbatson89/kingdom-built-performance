@@ -75,7 +75,11 @@ export function TwoPillars() {
               key={service.id}
               service={service}
               bookingUrl={
-                service.id === "private-lessons" ? BOOKING_URL : undefined
+                ["private-lessons", "group-training", "camps-clinics"].includes(
+                  service.id,
+                )
+                  ? BOOKING_URL
+                  : undefined
               }
             />
           ))}
