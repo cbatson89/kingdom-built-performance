@@ -6,6 +6,7 @@ import { BrandIcon } from "@/components/ui/BrandIcon";
 import { ServiceCard } from "@/components/services/ServiceCard";
 import { pillars } from "@/content/services";
 import { twoPillars } from "@/content/home";
+import { BOOKING_URL } from "@/content/site";
 
 /**
  * "Two Pillars, One Mission" — a tabbed section toggling between the Coaching
@@ -70,7 +71,13 @@ export function TwoPillars() {
           className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
           {activePillar.services.map((service) => (
-            <ServiceCard key={service.id} service={service} />
+            <ServiceCard
+              key={service.id}
+              service={service}
+              bookingUrl={
+                service.id === "private-lessons" ? BOOKING_URL : undefined
+              }
+            />
           ))}
         </div>
       </div>

@@ -1,11 +1,19 @@
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { Cta } from "@/components/ui/Cta";
 import type { Service } from "@/content/services";
 
 /**
  * ServiceCard — image + title + description + tag pills.
  * Shared by the homepage "Two Pillars" tabs and the Coaching/Performance pages.
+ * Pass `bookingUrl` to surface a "Book Now" CTA at the bottom of the card.
  */
-export function ServiceCard({ service }: { service: Service }) {
+export function ServiceCard({
+  service,
+  bookingUrl,
+}: {
+  service: Service;
+  bookingUrl?: string;
+}) {
   return (
     <article
       id={service.id}
@@ -47,6 +55,13 @@ export function ServiceCard({ service }: { service: Service }) {
             </li>
           ))}
         </ul>
+
+        {/* Booking CTA */}
+        {bookingUrl && (
+          <Cta href={bookingUrl} external variant="solid" className="mt-6 w-full">
+            Book Now
+          </Cta>
+        )}
       </div>
     </article>
   );
