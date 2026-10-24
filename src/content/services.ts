@@ -53,14 +53,14 @@ export const coaching: Pillar = {
         "Youth baseball team running organized indoor station work during a group training session",
     },
     {
-      id: "camps-clinics",
-      title: "Camps & Clinics",
+      id: "batting-cages",
+      title: "Batting Cages",
       description:
-        "Intensive multi-day camps and position-specific clinics led by experienced coaches. High reps, high energy, high results.",
-      tags: ["Multi-Day Camps", "Position Clinics", "All Levels"],
-      image: "/photos/KBP_Branding-39-compressed.jpg",
+        "Reserve indoor cage time to put in your own reps. Indoor tunnels mean weather never gets in the way of your work.",
+      tags: ["Cage Rental", "All Levels"],
+      image: "/photos/KBP_Branding-32-compressed.jpg",
       imageAlt:
-        "Group of young baseball players fielding ground balls during a multi-day camp at Kingdom Built Performance",
+        "Hitter finishing a swing inside an indoor netted batting cage at Kingdom Built Performance",
     },
   ],
   callout: {

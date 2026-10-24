@@ -16,8 +16,8 @@ export const hero = {
   ],
   subhead:
     "Developing athletes with elite performance, strong character, and a Kingdom mindset through intentional training, mentorship, and faith.",
-  primaryCta: { label: "Explore Coaching", href: "/coaching" },
-  secondaryCta: { label: "View Performance", href: "/performance" },
+  primaryCta: { label: "Book Coaching", href: "/coaching" },
+  secondaryCta: { label: "Book Performance", href: "/performance" },
   image: "/placeholders/hero.svg",
   imageAlt:
     "Kingdom Built Performance athletes training under stadium lights on a baseball field",

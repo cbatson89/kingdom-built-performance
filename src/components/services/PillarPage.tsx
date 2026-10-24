@@ -2,7 +2,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ServiceCard } from "@/components/services/ServiceCard";
 import { PillarCallout } from "@/components/services/PillarCallout";
 import type { Pillar } from "@/content/services";
-import { BOOKING_URL } from "@/content/site";
+import { SERVICE_BOOKING_URLS } from "@/content/site";
 
 /**
  * Shared layout for the Coaching and Performance detail pages: page heading,
@@ -14,11 +14,14 @@ export function PillarPage({
   eyebrow,
   headlineLines,
   intro,
+  comingSoon,
 }: {
   pillar: Pillar;
   eyebrow: string;
   headlineLines: readonly { text: string; emphasis: boolean }[];
   intro: string;
+  /** Shows a "Coming Soon" banner above the cards. */
+  comingSoon?: string;
 }) {
   return (
     <>
@@ -31,12 +34,23 @@ export function PillarPage({
             </p>
           </div>
 
+          {comingSoon ? (
+            <div className="mt-12 border-l-4 border-sand bg-navy p-8">
+              <h2 className="font-headline text-3xl font-bold uppercase tracking-tight text-sand sm:text-4xl">
+                Coming Soon
+              </h2>
+              <p className="mt-3 max-w-xl font-body leading-relaxed text-ivory/80">
+                {comingSoon}
+              </p>
+            </div>
+          ) : null}
+
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {pillar.services.map((service) => (
               <ServiceCard
                 key={service.id}
                 service={service}
-                bookingUrl={pillar.key === "coaching" ? BOOKING_URL : undefined}
+                bookingUrl={SERVICE_BOOKING_URLS[service.id]}
               />
             ))}
           </div>

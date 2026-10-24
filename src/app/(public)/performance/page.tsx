@@ -20,6 +20,7 @@ export default function PerformancePage() {
         { text: "Translates.", emphasis: true },
       ]}
       intro="Speed, strength, and data-driven hitting built specifically for baseball athletes. Our programming bridges the gap between the gym and the field so your work shows up on the diamond."
+      comingSoon="Performance programming isn't open for booking yet. We'll let you know as soon as it's available."
     />
   );
 }

@@ -1,5 +1,6 @@
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { Cta } from "@/components/ui/Cta";
+import { TodaySchedule } from "@/components/home/TodaySchedule";
 import { hero } from "@/content/home";
 import { verse } from "@/content/site";
 
@@ -59,16 +60,9 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Swift public booking calendar (mobile order 2, desktop right, spans both left rows) */}
+          {/* Today's schedule from Swift (mobile order 2, desktop right, spans both left rows) */}
           <div className="order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
-            <div className="w-full overflow-hidden rounded-2xl border border-charcoal bg-white shadow-2xl">
-              <iframe
-                src="https://book.runswiftapp.com/facilities/boomroom30a/calendar"
-                title="Kingdom Built Performance booking calendar"
-                loading="lazy"
-                className="h-[560px] w-full lg:h-[640px]"
-              />
-            </div>
+            <TodaySchedule />
           </div>
 
           {/* Brand verse (mobile order 3, desktop bottom-left) */}
