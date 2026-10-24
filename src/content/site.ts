@@ -43,9 +43,11 @@ export const business = {
   areaServed: ["Santa Rosa Beach", "30A", "Walton County", "Florida Panhandle"],
 } as const;
 
-// External booking system (RunSwift).
+// External booking system (RunSwift). The facility/booking backend predates the
+// rebrand, hence the "boomroom30a" slug — this is intentional, not a typo. The
+// Swift iOS app breaks on the kingdombuiltperformance slug, so keep this one.
 export const BOOKING_URL =
-  "https://book.runswiftapp.com/facilities/kingdombuiltperformance";
+  "https://book.runswiftapp.com/facilities/boomroom30a";
 
 // Per-service RunSwift booking pages, keyed by service id. Services not listed
 // here get no Book Now button.

@@ -6,7 +6,7 @@
  */
 
 const API = "https://book.runswiftapp.com/api/public";
-const FACILITY_ID = 227; // kingdombuiltperformance
+const FACILITY_ID = 227; // boomroom30a
 export const FACILITY_TIME_ZONE = "America/Chicago";
 
 // Swift caches nothing for us, so keep request volume low.
