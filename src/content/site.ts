@@ -57,6 +57,9 @@ export const SERVICE_BOOKING_URLS: Record<string, string> = {
   "batting-cages": `${BOOKING_URL}/rentals`,
 };
 
+// RunSwift membership signup page (used by the /memberships plan cards).
+export const MEMBERSHIPS_URL = `${BOOKING_URL}/memberships`;
+
 // Social handles — placeholder URLs until real profile links are provided.
 export const socials = [
   {
@@ -84,6 +87,7 @@ export const socials = [
 export const primaryNav = [
   { label: "Coaching", href: "/coaching" },
   { label: "Performance", href: "/performance" },
+  { label: "Memberships", href: "/memberships" },
   { label: "Facility", href: "/facility" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },

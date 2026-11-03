@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { MembershipCallout } from "@/components/home/MembershipCallout";
 import { Hero } from "@/components/home/Hero";
 import { ValuesTicker } from "@/components/home/ValuesTicker";
 import { MissionSection } from "@/components/home/MissionSection";
@@ -16,6 +17,7 @@ export const metadata: Metadata = buildMetadata({
 export default function HomePage() {
   return (
     <>
+      <MembershipCallout />
       <Hero />
       <ValuesTicker />
       <MissionSection />
