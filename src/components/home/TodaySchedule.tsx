@@ -8,18 +8,18 @@ import { BOOKING_URL, SERVICE_BOOKING_URLS } from "@/content/site";
 
 /**
  * "Today at KBP" — today's sessions pulled from the RunSwift public calendar
- * feed and rendered in brand styling. Classes link to the class booking page;
- * private lessons and rentals show as "Booked" (Swift hides their titles).
+ * feed and rendered in brand styling. Only group sessions (classes and camps)
+ * are shown — private lessons and rentals are filtered out. Classes link to the
+ * class booking page.
  * Falls back to the embedded Swift calendar if the feed is unavailable.
  */
 
 const CALENDAR_URL = `${BOOKING_URL}/calendar`;
 
-const TYPE_LABELS: Record<SessionType, string> = {
+// Group sessions only; Swift hides titles for lessons and rentals anyway.
+const TYPE_LABELS: Partial<Record<SessionType, string>> = {
   CLASS: "Group Class",
   CAMP: "Camp",
-  LESSON: "Private Lesson",
-  RENTAL: "Cage Rental",
 };
 
 const time = new Intl.DateTimeFormat("en-US", {
@@ -39,13 +39,15 @@ export async function TodaySchedule() {
   // Off unless explicitly enabled, so it can be tested locally before launch.
   if (process.env.SHOW_TODAY_SCHEDULE !== "true") return <CalendarEmbed />;
 
-  const sessions = await getTodaySchedule();
+  const all = await getTodaySchedule();
 
-  if (!sessions) return <CalendarEmbed />;
+  if (!all) return <CalendarEmbed />;
+
+  const sessions = all.filter((s) => s.type in TYPE_LABELS);
 
   return (
     <div className="flex w-full flex-col border border-charcoal bg-navy shadow-2xl lg:max-h-[640px]">
-      <div className="flex items-end justify-between gap-4 border-b border-charcoal px-6 py-5">
+      <div className="flex flex-col gap-3 border-b border-charcoal px-5 py-5 sm:flex-row sm:items-end sm:justify-between sm:gap-4 sm:px-6">
         <div>
           <p className="eyebrow mb-2">Today at KBP</p>
           <h2 className="font-headline text-2xl font-bold uppercase tracking-tight text-ivory sm:text-3xl">
@@ -64,7 +66,8 @@ export async function TodaySchedule() {
 
       {sessions.length === 0 ? (
         <p className="px-6 py-10 font-body text-ivory/70">
-          Nothing on the schedule yet today. Grab a lesson or cage time below.
+          No group classes on the schedule today. See the full schedule for
+          upcoming sessions.
         </p>
       ) : (
         <ul className="divide-y divide-charcoal overflow-y-auto">
@@ -77,31 +80,24 @@ export async function TodaySchedule() {
   );
 }
 
+// On mobile the row wraps: time + Book share the top line and the details take
+// the full width below. From sm up it's a single time | details | Book row.
 function SessionRow({ session: s }: { session: Session }) {
-  const isPublic = s.type === "CLASS" || s.type === "CAMP";
-
   return (
-    <li className="flex items-center gap-5 px-6 py-4">
-      <div className="w-20 shrink-0 font-subhead text-sm font-medium uppercase text-sand">
+    <li className="flex flex-wrap items-center gap-x-5 gap-y-2 px-5 py-4 sm:flex-nowrap sm:px-6">
+      <div className="order-1 flex-1 font-subhead text-sm font-medium uppercase text-sand sm:w-20 sm:flex-none sm:shrink-0">
         {time.format(s.start)}
-        <span className="block text-xs text-ivory/50">
+        <span className="ml-2 text-xs text-ivory/50 sm:ml-0 sm:block">
           to {time.format(s.end)}
         </span>
       </div>
 
-      <div className="min-w-0 flex-1">
+      <div className="order-3 w-full min-w-0 sm:order-2 sm:w-auto sm:flex-1">
         <p className="font-subhead text-[0.7rem] font-medium uppercase tracking-[0.2em] text-ivory/50">
-          {TYPE_LABELS[s.type] ?? "Session"}
+          {TYPE_LABELS[s.type]}
         </p>
-        <p
-          className={[
-            "font-body leading-snug",
-            isPublic ? "text-ivory" : "text-ivory/60",
-          ].join(" ")}
-        >
-          {isPublic ? s.title : "Booked"}
-        </p>
-        {isPublic && s.instructors.length > 0 ? (
+        <p className="font-body leading-snug text-ivory">{s.title}</p>
+        {s.instructors.length > 0 ? (
           <p className="mt-0.5 font-body text-sm text-ivory/50">
             with {s.instructors.join(", ")}
           </p>
@@ -113,7 +109,7 @@ function SessionRow({ session: s }: { session: Session }) {
           href={SERVICE_BOOKING_URLS["group-training"]}
           target="_blank"
           rel="noopener noreferrer"
-          className="shrink-0 border border-sand px-3 py-1.5 font-subhead text-xs font-medium uppercase tracking-[0.15em] text-sand transition-colors hover:bg-sand hover:text-midnight"
+          className="order-2 shrink-0 border border-sand px-3 sm:order-3 py-1.5 font-subhead text-xs font-medium uppercase tracking-[0.15em] text-sand transition-colors hover:bg-sand hover:text-midnight"
         >
           Book
         </a>

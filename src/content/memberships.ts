@@ -98,5 +98,9 @@ export const memberships = {
 export const membershipCallout = {
   eyebrow: "Now Enrolling · Memberships Start Nov 2",
   heading: "Memberships Are Here",
-  body: "Cage, gym, or both — from $280/mo. Founding 40 Premier pricing for our first 40 families.",
+  // Each entry renders on its own line.
+  body: [
+    "Foundations | Warrior | Premier",
+    "Founding 40 Premier pricing for our first 40 families.",
+  ],
 } as const;

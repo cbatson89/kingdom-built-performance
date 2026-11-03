@@ -17,7 +17,11 @@ export function MembershipCallout() {
               {membershipCallout.heading}
             </h2>
             <p className="mt-2 max-w-2xl font-body text-ivory/70">
-              {membershipCallout.body}
+              {membershipCallout.body.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
             </p>
           </div>
           <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
@@ -25,7 +29,9 @@ export function MembershipCallout() {
               View Memberships
             </Cta>
             <Cta href={business.phoneHref} variant="outline">
-              Call for Info
+              {/* Desktop can't always dial, so show the number itself. */}
+              <span className="lg:hidden">Call for Info</span>
+              <span className="hidden lg:inline">Call {business.phone}</span>
             </Cta>
           </div>
         </div>
