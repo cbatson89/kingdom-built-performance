@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Cta } from "@/components/ui/Cta";
+import { FoundingPopup } from "@/components/memberships/FoundingPopup";
 import { memberships } from "@/content/memberships";
 import { business, MEMBERSHIPS_URL } from "@/content/site";
 import { buildMetadata } from "@/lib/seo";
@@ -207,6 +208,8 @@ export default function MembershipsPage() {
           </div>
         </div>
       </section>
+
+      <FoundingPopup />
     </>
   );
 }
